@@ -1,25 +1,52 @@
-"use client"
-import React from 'react';
-import { NavLink } from './NavLinks'
+"use client";
+import Image from "next/image";
+import React from "react";
+import { motion } from "framer-motion";
 
- const Header: React.FC = () => {
+const Header = () => {
   return (
-    <header>
+    <header className="bg-gray-800 text-white p-4 flex items-center">
+      {/* Image on the left */}
+      <Image
+        src="/my.jpeg"
+        alt="Your Name"
+        className="w-12 h-12 rounded-full"
+      />
+
+      {/* Name in the middle (flex-grow to take remaining space) */}
+      <h1 className="flex-grow text-xl font-semibold ml-4">Your Name</h1>
+
+      {/* Links on the right */}
       <nav>
-        <ul>
-          <li>
-            <NavLink href="/">Home</NavLink>
+        <motion.ul
+          initial={{ "--rotate": "0deg" } as any}
+          animate={{ "--rotate": "360deg" } as any}
+          transition={{ duration: 2 }}
+          className="flex space-x-4"
+        >
+          <li style={{ transform: "rotate(var(--rotate))" }}>
+            <a href="#" className="hover:text-gray-300">
+              Home
+            </a>
+          </li>
+          <li style={{ transform: "rotate(var(--rotate))" }}>
+            <a href="#" className="hover:text-gray-300">
+              About
+            </a>
+          </li>
+          <li style={{ transform: "rotate(var(--rotate))" }}>
+            <a href="#" className="hover:text-gray-300">
+              Social Media
+            </a>
           </li>
           <li>
-            <NavLink href="/about">About</NavLink>
+            <Image
+              src="/flag.jpeg"
+              alt="Your Name"
+              className="w-20 h-12"
+            />
           </li>
-          <li>
-            <NavLink href="/projects">Projects</NavLink>
-          </li>
-          <li>
-            <NavLink href="/contact">Contact</NavLink>
-          </li>
-        </ul>
+        </motion.ul>
       </nav>
     </header>
   );
