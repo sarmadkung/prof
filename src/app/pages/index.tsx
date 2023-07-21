@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from 'react';
-import { Contact } from './components/Contact';
-import { Projects } from './components/Projects';
-import { Skills } from './components/Skills';
-import { MyHome } from './components/MyHome';
-const Header = lazy(() => import('./components/Header'));
+import { Contact } from './contact';
+import { Projects } from './projects';
+import { Skills } from './skills';
+import { MyHome } from './myHome';
+const Header = lazy(() => import('./header'));
 export default function Home() {
   return (
     <body className=''>

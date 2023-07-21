@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { SkillItem } from './SkillItem';
+import { SkillItem } from '../components/SkillItem';
 
 export const Skills: React.FC = () => {
   return (
