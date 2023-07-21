@@ -6,9 +6,9 @@ import React from "react";
 export const MyHome: React.FC = () => {
   const socialMediaLinks = [
     { source: "/facebook-f.svg", link: "https://www.facebook.com/" },
-    { source: "twitter.svg", link: "https://www.twitter.com/" },
-    { source: "linkedin-in.svg", link: "https://www.instagram.com/" },
-    { source: "github.svg", link: "https://www.github.com/" },
+    { source: "/twitter.svg", link: "https://www.twitter.com/" },
+    { source: "/linkedin-in.svg", link: "https://www.instagram.com/" },
+    { source: "/github.svg", link: "https://www.github.com/" },
   ];
 
   return (
@@ -38,6 +38,7 @@ export const MyHome: React.FC = () => {
                     height={15}
                     src={item.source}
                     alt="Your Image"
+                    color="white"
                   />
                 </i>
               </a>

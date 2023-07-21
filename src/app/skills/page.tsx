@@ -1,10 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import { SkillItem } from '../components/SkillItem';
+import Header from '../components/header';
 
-export const Skills: React.FC = () => {
+const Skills: React.FC = () => {
   return (
     <>
+    <Header />
       <Head>
         <title>Skills | My Portfolio</title>
       </Head>
@@ -28,3 +30,5 @@ export const Skills: React.FC = () => {
     </>
   );
 };
+
+export default Skills;

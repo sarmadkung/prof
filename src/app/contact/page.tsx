@@ -1,10 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import {ContactForm} from '../components/ContactForm';
+import Header from '../components/header';
 
-export const Contact: React.FC = () => {
+const Contact: React.FC = () => {
   return (
     <>
+    <Header />
+      
       <Head>
         <title>Contact | My Portfolio</title>
       </Head>
@@ -18,3 +21,6 @@ export const Contact: React.FC = () => {
     </>
   );
 };
+
+
+export default Contact;

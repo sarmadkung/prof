@@ -1,9 +1,6 @@
 import React, { lazy, Suspense } from 'react';
-import { Contact } from './contact';
-import { Projects } from './projects';
-import { Skills } from './skills';
-import { MyHome } from './myHome';
-const Header = lazy(() => import('./header'));
+import { MyHome } from './components/myHome';
+const Header = lazy(() => import('./components/header'));
 export default function Home() {
   return (
     <body className=''>
@@ -14,9 +11,6 @@ export default function Home() {
       </header>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <MyHome />
-        <Skills />
-
-        {/* <Contact /> */}
       </main>
     </body>
   );

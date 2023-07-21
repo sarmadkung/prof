@@ -2,9 +2,12 @@
 "use client"
 import Image from 'next/image';
 import React from 'react';
+import Header from '../components/header';
 
-export const About: React.FC = () => {
-  return (
+ const About: React.FC = () => {
+   return (
+     <>
+    <Header />
     <div className="flex justify-center items-center h-screen">
       {/* Left Div with Image */}
       <div className="flex flex-col w-200 items-center mr-8">
@@ -29,6 +32,9 @@ export const About: React.FC = () => {
                 <p>Writing code is an extension of that. Work doesn’t feel like work.</p>  
                  <p> It feels like I’m just playing games and solving riddles all day.</p>
       </div>
-    </div>
+       </div>
+       </>
   );
-};
+ };
+
+export default About;

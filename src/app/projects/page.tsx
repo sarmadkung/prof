@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Head from 'next/head';
+import Header from '../components/header';
 
 const projectsData = [
   {
@@ -18,9 +19,11 @@ const projectsData = [
   // Add more projects with their titles, descriptions, and image URLs
 ];
 
-export const Projects: React.FC = () => {
+ const Projects: React.FC = () => {
   return (
     <>
+    <Header />
+      
       <Head>
         <title>Projects | My Portfolio</title>
       </Head>
@@ -42,4 +45,6 @@ export const Projects: React.FC = () => {
       </div>
     </>
   );
-};
+ };
+
+ export default Projects;
